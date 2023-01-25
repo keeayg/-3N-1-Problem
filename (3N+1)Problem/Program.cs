@@ -6,14 +6,17 @@ namespace _3N_1_Problem
     {
         static void Main(string[] args)
         {
+            // Text and Read Number Section
             int choice = Start();
 
+            //While Condition
             bool choiceIsTrue = false;
             if (!(choice == null))
             {
                 choiceIsTrue = true;
             }
 
+            //Divisibility Check By 2
             bool IsDouble(int a, int b)
             {
                 bool DoubleIsTrue = false;
@@ -27,6 +30,8 @@ namespace _3N_1_Problem
 
             int newNUm;
             newNUm = choice;
+
+            //While Start
             while (choiceIsTrue == true)
             {
                 while (newNUm != 0 && newNUm != 1)
@@ -85,6 +90,7 @@ namespace _3N_1_Problem
                 Console.WriteLine();
                 Console.WriteLine();
 
+                //Loop message 
                 if (count == 4)
                 {
                     choiceIsTrue = false;
