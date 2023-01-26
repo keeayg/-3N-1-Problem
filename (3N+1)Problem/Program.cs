@@ -8,7 +8,7 @@ namespace _3N_1_Problem
         {
             // Text and Read Number Section
             int choice = Start();
-
+           
             //While Condition
             bool choiceIsTrue = false;
             if (!(choice == null))
@@ -31,6 +31,9 @@ namespace _3N_1_Problem
             int newNUm;
             newNUm = choice;
 
+            // List 
+            List<int> numbers = new List<int>();
+
             //While Start
             while (choiceIsTrue == true)
             {
@@ -45,12 +48,14 @@ namespace _3N_1_Problem
                         {
                             newNUm = newNUm / 2;
                             Console.WriteLine($"Divided number: " + newNUm);
+                            numbers.Add(newNUm);
                             bb = IsDouble(newNUm, 2);
                         }
                     }
                     else
                     {
                         newNUm = ((newNUm * 3) + 1); Console.WriteLine($"new number: " + newNUm);
+                        numbers.Add(newNUm);
                     }
 
                 }
@@ -97,6 +102,25 @@ namespace _3N_1_Problem
                     Console.WriteLine("İt is a LOOP.");
                 }
 
+
+
+                var top = numbers[0];
+                var min = numbers[0];
+
+                foreach (int sayi in numbers)
+                {
+                    if (sayi > top)
+                    {
+                        top = sayi;
+                    }
+                    if (sayi < min)
+                    {
+                        min = sayi;
+                    }
+                }
+
+                Console.WriteLine("Top Number:{0}", top);
+                Console.WriteLine("Min Number:{0}", min);
             }
         }
         private static int Start()
