@@ -7,7 +7,7 @@ namespace _3N_1_Problem
         static void Main(string[] args)
         {
             // Text and Read Number Section
-            int choice = Start();
+            double choice = Start();
            
             //While Condition
             bool choiceIsTrue = false;
@@ -17,10 +17,10 @@ namespace _3N_1_Problem
             }
 
             //Divisibility Check By 2
-            bool IsDouble(int a, int b)
+            bool IsDouble(double a, double b)
             {
                 bool DoubleIsTrue = false;
-                int result = a % b;
+                double result = a % b;
                 if (result == 0)
                 {
                     DoubleIsTrue = true;
@@ -28,11 +28,11 @@ namespace _3N_1_Problem
                 return DoubleIsTrue;
             }
 
-            int newNUm;
+            double newNUm;
             newNUm = choice;
 
             // List 
-            List<int> numbers = new List<int>();
+            List<double> numbers = new List<double>();
 
             //While Start
             while (choiceIsTrue == true)
@@ -103,7 +103,7 @@ namespace _3N_1_Problem
                 }
 
 
-
+                // List Search for Biggest Number
                 var top = numbers[0];
                 var min = numbers[0];
 
@@ -123,7 +123,7 @@ namespace _3N_1_Problem
                 Console.WriteLine("Min Number:{0}", min);
             }
         }
-        private static int Start()
+        private static double Start()
         {
             Console.WriteLine("3x+1 PROBLEM");
             Console.WriteLine();
@@ -131,7 +131,7 @@ namespace _3N_1_Problem
             Console.WriteLine();
             Console.WriteLine("Pick a number:");
             Console.WriteLine("Waiting insert...");
-            var choice = Convert.ToInt32(Console.ReadLine());
+            double choice = Convert.ToDouble(Console.ReadLine());
             return choice;
         }
     }
